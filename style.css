@@ -4,21 +4,23 @@
     border: none;
     cursor: pointer;
     font-size: 1.2em;
-    padding: 12px 15px; /* Prilagodba razmaka za sve uređaje */
+    padding: 12px 20px; /* Dovoljno prostora za klik */
     width: 100%; /* Dugme zauzima punu širinu forme */
-    max-width: 300px; /* Maksimalna širina za veće ekrane */
+    max-width: 300px; /* Maksimalna širina za dugme */
     margin: 0 auto; /* Centriranje dugmeta */
-    display: block; /* Dugme ostaje vidljivo i prilagodljivo */
+    display: block; /* Osigurava prikaz dugmeta */
 }
 
 .contact-form button:hover {
     background-color: #003f8c;
 }
 
+/* Specifično za manje ekrane */
 @media (max-width: 600px) {
     .contact-form button {
-        font-size: 1em; /* Smanjeni font za manje uređaje */
-        padding: 10px; /* Manji razmak za uske ekrane */
-        max-width: 100%; /* Dugme zauzima punu širinu na manjim uređajima */
+        font-size: 1em; /* Smanjeni font za mobilne uređaje */
+        padding: 10px; /* Prilagodba prostora */
+        max-width: 100%; /* Dugme zauzima punu širinu na manjim ekranima */
     }
 }
+
