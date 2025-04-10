@@ -156,7 +156,7 @@
         </div>
     </footer>
     <script>
-      function showSection(id) {
+     function showSection(id) {
   const sections = document.querySelectorAll('.section');
   sections.forEach(section => {
     section.classList.remove('active');
@@ -165,9 +165,7 @@
   
   const activeSection = document.getElementById(id);
   activeSection.style.display = 'block'; // Prikazujemo aktivnu sekciju
-  setTimeout(() => {
-    activeSection.classList.add('active'); // Dodajemo klasu za animaciju
-  }, 10); // Kratko kašnjenje za pokretanje animacije
+  activeSection.classList.add('active'); // Postavljamo aktivnu klasu
 }
     </script>
 </body>
