@@ -1,8 +1,0 @@
-/* Stil za sekcije bez animacije */
-.section {
-  display: none;
-}
-
-.section.active {
-  display: block;
-}
