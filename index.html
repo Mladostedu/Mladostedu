@@ -156,19 +156,18 @@
         </div>
     </footer>
     <script>
-       function showSection(id) {
+      function showSection(id) {
   const sections = document.querySelectorAll('.section');
   sections.forEach(section => {
     section.classList.remove('active');
-    setTimeout(() => {
-      section.style.display = 'none';
-    }, 500); // Vrijeme mora biti isto kao CSS 'transition-duration'
+    section.style.display = 'none'; // Skrivamo neaktivne sekcije
   });
+  
   const activeSection = document.getElementById(id);
-  activeSection.style.display = 'block'; // Prikazuje sekciju
+  activeSection.style.display = 'block'; // Prikazujemo aktivnu sekciju
   setTimeout(() => {
-    activeSection.classList.add('active');
-  }, 50); // Kratko kašnjenje za pokretanje animacije
+    activeSection.classList.add('active'); // Dodajemo klasu za animaciju
+  }, 10); // Kratko kašnjenje za pokretanje animacije
 }
     </script>
 </body>
