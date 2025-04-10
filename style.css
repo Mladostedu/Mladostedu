@@ -1,0 +1,10 @@
+/* Pozadina sa bijelom bojom i crnim linijama */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  background-image: linear-gradient(to right, black 2px, transparent 2px), 
+                    linear-gradient(to bottom, black 2px, transparent 2px);
+  background-size: 40px 40px; /* Veličina mreže linija */
+}
