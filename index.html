@@ -156,11 +156,20 @@
         </div>
     </footer>
     <script>
-        function showSection(id) {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => section.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-        }
+       function showSection(id) {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => {
+    section.classList.remove('active');
+    setTimeout(() => {
+      section.style.display = 'none';
+    }, 500); // Vrijeme mora biti isto kao CSS 'transition-duration'
+  });
+  const activeSection = document.getElementById(id);
+  activeSection.style.display = 'block'; // Prikazuje sekciju
+  setTimeout(() => {
+    activeSection.classList.add('active');
+  }, 50); // Kratko kašnjenje za pokretanje animacije
+}
     </script>
 </body>
 </html>
