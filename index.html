@@ -1,172 +1,169 @@
 <!DOCTYPE html>
 <html lang="bs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mladost Education</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        header {
-            background-color: #0056b3;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        header img {
-            max-width: 100px;
-            border-radius: 50%;
-        }
-        nav {
-            background-color: #333;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
-        nav a {
-            display: inline-block;
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.2em;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        nav a:hover {
-            background-color: #0056b3;
-            color: white;
-        }
-        .section {
-            display: none;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            background-color: white;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        .section.active {
-            display: block;
-        }
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-        }
-        .contact-form input, .contact-form textarea, .contact-form button {
-            margin-bottom: 15px;
-            padding: 10px;
-            font-size: 1em;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            background-color: #0056b3;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: #003f8c;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .social-icons {
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-        }
-        .social-icons a {
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-            transition: transform 0.3s;
-        }
-        .social-icons img:hover {
-            transform: scale(1.2);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mladost Education</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+header {
+  background-color: #0056b3;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+header img {
+  max-width: 100px;
+  border-radius: 50%;
+}
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+nav a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+nav a:hover {
+  background-color: #0056b3;
+  color: white;
+}
+.section {
+  display: none;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.section.active {
+  display: block;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form input, .contact-form textarea, .contact-form button {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.contact-form button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: #003f8c;
+}
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+</style>
 </head>
 <body>
-    <header>
-        <img src="Icons/ChatGPT_Image_2025_M04_7_17_51_39-modified-removebg-preview.png" alt="Logo organizacije">
-        <h1>Mladost Education Non-Formal Organization</h1>
-    </header>
-    <nav>
-        <a href="#home" onclick="showSection('home')">Home</a>
-        <a href="#about" onclick="showSection('about')">O nama</a>
-        <a href="#contact" onclick="showSection('contact')">Kontakt</a>
-    </nav>
-    <div id="home" class="section active">
-        <h2 style="text-align: center; font-size: 2.5em; font-weight: bold;">Edukacijom u<br>bolju budućnost.</h2>
-    </div>
-    <div id="about" class="section">
-        <h2>O nama</h2>
-        <p>U svijetu koji se brzo mijenja, jedno ostaje nepromjenjivo – znanje je ključ uspjeha i ličnog razvoja. Naša
-        organizacija vjeruje da je edukacija temelj na kojem gradimo bolje sutra, a posebno mladima želimo pružiti
-        priliku da otkriju svoj potencijal.</p>
-
-        <p>Naša misija je jednostavna, ali moćna: inspirisati i osnažiti mlade ljude da prepoznaju vrijednost znanja. Bilo
-        da želite steći nove vještine, pronaći svoj karijerni put ili jednostavno unaprijediti svoje interese, mi smo tu da
-        vas podržimo na tom putovanju.</p>
-
-        <p>Pridružite nam se u ovom važnom projektu. Zajedno možemo pokazati da nikada nije kasno za učenje i da svaki
-        korak ka znanju donosi neprocjenjive promjene u našim životima i zajednicama.</p>
-
-        <p>Naša organizacija je neprofitna i neovisna organizacija koja djeluje izvan okvira vlade.</p>
-    </div>
-   <div id="contact" class="section">
-  <h2>Kontakt</h2>
-  <form class="contact-form" action="https://formspree.io/f/xeoapryv" method="POST">
-    <label for="name">Ime:</label>
-    <input type="text" id="name" name="name" placeholder="Unesite vaše ime" required>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Unesite vašu email adresu" required>
-    <label for="message">Poruka:</label>
-    <textarea id="message" name="message" placeholder="Vaša poruka" rows="4" required></textarea>
-    <button type="submit" id="submit-button">Pošalji</button>
-  </form>
+<header>
+<img src="Icons/ChatGPT_Image_2025_M04_7_17_51_39-modified-removebg-preview.png" alt="Logo organizacije">
+<h1>Mladost Education Non-Formal Organization</h1>
+</header>
+<nav>
+<a href="#home" onclick="showSection('home')">Home</a>
+<a href="#about" onclick="showSection('about')">O nama</a>
+<a href="#contact" onclick="showSection('contact')">Kontakt</a>
+</nav>
+<div id="home" class="section active">
+<h2 style="text-align: center; font-size: 2.5em; font-weight: bold;">Edukacijom u<br>bolju budućnost.</h2>
 </div>
-    <footer>
-        <p>&copy; 2025 Mladost Education. Sva prava zadržana.</p>
-        <div class="social-icons">
-            <a href="https://facebook.com/mladostedu" target="_blank" title="Facebook">
-                <img src="Icons/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://twitter.com/Mladost_Edu" target="_blank" title="Twitter">
-                <img src="Icons/twitter.png" alt="Twitter">
-            </a>
-            <a href="https://instagram.com/mladostedu" target="_blank" title="Instagram">
-                <img src="Icons/instagram.png" alt="Instagram">
-            </a>
-        </div>
-    </footer>
-    <script>
-     function showSection(id) {
+<div id="about" class="section">
+<h2>O nama</h2>
+<p>U svijetu koji se brzo mijenja, jedno ostaje nepromjenjivo – znanje je ključ uspjeha i ličnog razvoja. Naša
+organizacija vjeruje da je edukacija temelj na kojem gradimo bolje sutra, a posebno mladima želimo pružiti
+priliku da otkriju svoj potencijal.</p>
+<p>Naša misija je jednostavna, ali moćna: inspirisati i osnažiti mlade ljude da prepoznaju vrijednost znanja. Bilo
+da želite steći nove vještine, pronaći svoj karijerni put ili jednostavno unaprijediti svoje interese, mi smo tu da
+vas podržimo na tom putovanju.</p>
+<p>Pridružite nam se u ovom važnom projektu. Zajedno možemo pokazati da nikada nije kasno za učenje i da svaki
+korak ka znanju donosi neprocjenjive promjene u našim životima i zajednicama.</p>
+<p>Naša organizacija je neprofitna i neovisna organizacija koja djeluje izvan okvira vlade.</p>
+</div>
+<div id="contact" class="section">
+<h2>Kontakt</h2>
+<form class="contact-form" action="https://formspree.io/f/xeoapryv" method="POST">
+  <label for="name">Ime:</label>
+  <input type="text" id="name" name="name" placeholder="Unesite vaše ime" required>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="Unesite vašu email adresu" required>
+  <label for="message">Poruka:</label>
+  <textarea id="message" name="message" placeholder="Vaša poruka" rows="4" required></textarea>
+  <button type="submit" id="submit-button">Pošalji</button>
+</form>
+</div>
+<footer>
+<p>&copy; 2025 Mladost Education. Sva prava zadržana.</p>
+<div class="social-icons">
+<a href="https://facebook.com/mladostedu" target="_blank" title="Facebook">
+<img src="Icons/facebook.png" alt="Facebook">
+</a>
+<a href="https://twitter.com/Mladost_Edu" target="_blank" title="Twitter">
+<img src="Icons/twitter.png" alt="Twitter">
+</a>
+<a href="https://instagram.com/mladostedu" target="_blank" title="Instagram">
+<img src="Icons/instagram.png" alt="Instagram">
+</a>
+</div>
+</footer>
+<script>
+function showSection(id) {
   const sections = document.querySelectorAll('.section');
   sections.forEach(section => {
     section.classList.remove('active');
     section.style.display = 'none'; // Skrivamo neaktivne sekcije
   });
-  
+
   const activeSection = document.getElementById(id);
   activeSection.style.display = 'block'; // Prikazujemo aktivnu sekciju
   activeSection.classList.add('active'); // Postavljamo aktivnu klasu
 }
-    </script>
+</script>
 </body>
 </html>
