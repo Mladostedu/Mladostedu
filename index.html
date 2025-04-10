@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mladost Education</title>
     <style>
-        /* Opći stilovi */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -29,6 +28,7 @@
             padding: 10px 0;
         }
         nav a {
+            display: inline-block;
             color: white;
             text-decoration: none;
             margin: 0 20px;
@@ -39,6 +39,7 @@
         }
         nav a:hover {
             background-color: #0056b3;
+            color: white;
         }
         .section {
             display: none;
@@ -52,7 +53,6 @@
         .section.active {
             display: block;
         }
-        /* Kontakt forma */
         .contact-form {
             display: flex;
             flex-direction: column;
@@ -74,21 +74,20 @@
             cursor: pointer;
             font-size: 1.2em;
             padding: 12px;
-            max-width: 300px;
             width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
             display: block;
-            text-align: center;
         }
         .contact-form button:hover {
             background-color: #003f8c;
         }
         @media (max-width: 600px) {
             .contact-form input, .contact-form textarea, .contact-form button {
-                font-size: 0.9em; /* Smanjeni font */
-                padding: 8px; /* Prilagođavanje za manje uređaje */
+                font-size: 1em;
+                padding: 10px;
             }
         }
-        /* Brojač pregleda */
         #view-count {
             text-align: center;
             margin-top: 20px;
@@ -116,6 +115,9 @@
         <p>U svijetu koji se brzo mijenja, jedno ostaje nepromjenjivo – znanje je ključ uspjeha i ličnog razvoja. Naša
         organizacija vjeruje da je edukacija temelj na kojem gradimo bolje sutra, a posebno mladima želimo pružiti
         priliku da otkriju svoj potencijal.</p>
+        <p>Naša misija je jednostavna, ali moćna: inspirisati i osnažiti mlade ljude da prepoznaju vrijednost znanja. Bilo
+        da želite steći nove vještine, pronaći svoj karijerni put ili jednostavno unaprijediti svoje interese, mi smo tu da
+        vas podržimo na tom putovanju.</p>
     </div>
     <div id="contact" class="section">
         <h2>Kontakt</h2>
@@ -131,6 +133,17 @@
     </div>
     <footer>
         <p>&copy; 2025 Mladost Education. Sva prava zadržana.</p>
+        <div class="social-icons">
+            <a href="https://facebook.com/mladostedu" target="_blank" title="Facebook">
+                <img src="Icons/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com/Mladost_Edu" target="_blank" title="Twitter">
+                <img src="Icons/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com/mladostedu" target="_blank" title="Instagram">
+                <img src="Icons/instagram.png" alt="Instagram">
+            </a>
+        </div>
     </footer>
     <script>
         function showSection(id) {
