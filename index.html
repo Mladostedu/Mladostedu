@@ -158,6 +158,9 @@ korak ka znanju donosi neprocjenjive promjene u našim životima i zajednicama.<
 </footer>
 <script>
 function showSection(id) {
+  // Sprečavanje skrolanja prema vrhu
+  event.preventDefault(); // Zaustavlja zadano ponašanje
+  
   const sections = document.querySelectorAll('.section');
   sections.forEach(section => {
     section.classList.remove('active');
