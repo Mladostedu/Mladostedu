@@ -169,5 +169,23 @@ function showSection(id) {
   activeSection.classList.add('active'); // Postavljamo aktivnu klasu
 }
 </script>
+  <script>
+window.onload = function() {
+  const userAgent = navigator.userAgent.toLowerCase();
+  let deviceType;
+
+  if (userAgent.includes("android")) {
+    deviceType = "Android uređaj";
+  } else if (userAgent.includes("mac")) {
+    deviceType = "Mac uređaj";
+  } else if (userAgent.includes("windows")) {
+    deviceType = "Windows uređaj";
+  } else {
+    deviceType = "Nepoznat uređaj";
+  }
+
+  alert(`Pristupili ste našoj stranici putem: ${deviceType}`);
+};
+</script>
 </body>
 </html>
