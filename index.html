@@ -8,7 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0 0 100px 0; /* Povećan padding na dnu stranice */
+  padding: 0 0 100px 0;
   background-color: #f9f9f9;
 }
 header {
@@ -112,14 +112,17 @@ footer {
 <a href="#contact" onclick="showSection(event, 'contact')">Kontakt</a>
 </nav>
 <div id="home" class="section active">
-  <h2 style="text-align: center; font-size: 2.5em; font-weight: bold;"><br></h2>
-  <!-- Ugrađena prezentacija -->
-  <iframe src="https://docs.google.com/presentation/d/1nXE8kTZ8_ryLn2eCkKdKhzByMBsUsX8GKgv5EtE1bU8/edit?usp=sharing" 
-          width="600" 
-          height="400" 
-          frameborder="0" 
-          allowfullscreen>
-  </iframe>
+  <h2 style="text-align: center; font-size: 2.5em; font-weight: bold;">Dobrodošli na našu stranicu!</h2>
+  <div id="slideshow" style="max-width: 600px; margin: auto;">
+    <img src="Images/slide1.jpg" alt="Slide 1" style="width: 100%;">
+    <img src="Images/slide2.jpg" alt="Slide 2" style="width: 100%; display: none;">
+    <img src="Images/slide3.jpg" alt="Slide 3" style="width: 100%; display: none;">
+    <img src="Images/slide4.jpg" alt="Slide 4" style="width: 100%; display: none;">
+    <img src="Images/slide3.jpg" alt="Slide 5" style="width: 100%; display: none;">
+    <img src="Images/slide3.jpg" alt="Slide 6" style="width: 100%; display: none;">
+    <img src="Images/slide3.jpg" alt="Slide 7" style="width: 100%; display: none;">
+    <img src="Images/slide3.jpg" alt="Slide 8" style="width: 100%; display: none;">
+  </div>
 </div>
 <div id="about" class="section">
 <h2>O nama</h2>
@@ -175,6 +178,17 @@ function showSection(event, id) {
   activeSection.style.display = 'block'; // Prikazujemo aktivnu sekciju
   activeSection.classList.add('active'); // Postavljamo aktivnu klasu
 }
+
+let slides = document.querySelectorAll("#slideshow img");
+let currentSlide = 0;
+
+function showNextSlide() {
+  slides[currentSlide].style.display = "none"; // Sakrij trenutni slajd
+  currentSlide = (currentSlide + 1) % slides.length; // Pređi na sljedeći slajd
+  slides[currentSlide].style.display = "block"; // Prikaži sljedeći slajd
+}
+
+setInterval(showNextSlide, 3000); // Promjena svakih 3 sekunde
 
 window.onload = function() {
   const userAgent = navigator.userAgent.toLowerCase();
