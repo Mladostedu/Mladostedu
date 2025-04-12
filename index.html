@@ -99,6 +99,9 @@ footer {
 .social-icons img:hover {
   transform: scale(1.2);
 }
+img {
+  border-radius: 20px; /* Zaobljeni uglovi slike */
+}
 </style>
 </head>
 <body>
@@ -112,16 +115,16 @@ footer {
 <a href="#contact" onclick="showSection(event, 'contact')">Kontakt</a>
 </nav>
 <div id="home" class="section active">
-  <h2 style="text-align: center; font-size: 2.5em; font-weight: bold;">Učenje nije dosadno. Samo trebaš pravu stranicu.</h2>
-  <div id="slideshow" style="max-width: 1000px; margin: auto;">
-    <img src="Icons/Prez 1.jpg" alt="Slide 1" style="width: 100%;">
-    <img src="Icons/Prez 2.jpg" alt="Slide 2" style="width: 100%; display: none;">
-    <img src="Icons/Prez 3.jpg" alt="Slide 3" style="width: 100%; display: none;">
-    <img src="Icons/Prez 4.jpg" alt="Slide 4" style="width: 100%; display: none;">
-    <img src="Icons/Prez 5.jpg" alt="Slide 5" style="width: 100%; display: none;">
-    <img src="Icons/Prez 6.jpg" alt="Slide 6" style="width: 100%; display: none;">
-    <img src="Icons/Prez 7.jpg" alt="Slide 7" style="width: 100%; display: none;">
-    <img src="Icons/Prez 8.jpg" alt="Slide 8" style="width: 100%; display: none;">
+  <h2 style="text-align: center; font-size: 2em; font-weight: bold;">Učenje nije dosadno. Samo trebaš pravu stranicu.</h2>
+  <div id="slideshow" style="max-width: 1000px; margin: auto; overflow: hidden;">
+    <img src="Icons/Prez1.jpg" alt="Slide 1" style="width: 100%; transition: opacity 5s;">
+    <img src="Icons/Prez2.jpg" alt="Slide 2" style="width: 100%; display: none; transition: opacity 5s;">
+    <img src="Icons/Prez3.jpg" alt="Slide 3" style="width: 100%; display: none; transition: opacity 5s;">
+    <img src="Icons/Prez4.jpg" alt="Slide 4" style="width: 100%; display: none; transition: opacity 5s;">
+    <img src="Icons/Prez5.jpg" alt="Slide 5" style="width: 100%; display: none; transition: opacity 5s;">
+    <img src="Icons/Prez6.jpg" alt="Slide 6" style="width: 100%; display: none; transition: opacity 5s;">
+    <img src="Icons/Prez7.jpg" alt="Slide 7" style="width: 100%; display: none; transition: opacity 5s;">
+    <img src="Icons/Prez8.jpg" alt="Slide 8" style="width: 100%; display: none; transition: opacity 5s;">
   </div>
 </div>
 <div id="about" class="section">
@@ -183,12 +186,14 @@ let slides = document.querySelectorAll("#slideshow img");
 let currentSlide = 0;
 
 function showNextSlide() {
-  slides[currentSlide].style.display = "none"; // Sakrij trenutni slajd
-  currentSlide = (currentSlide + 1) % slides.length; // Pređi na sljedeći slajd
-  slides[currentSlide].style.display = "block"; // Prikaži sljedeći slajd
+  slides[currentSlide].style.opacity = 0; // Postavite trenutnu sliku na nevidljivu
+  slides[currentSlide].style.display = "none"; // Sakrij trenutnu sliku
+  currentSlide = (currentSlide + 1) % slides.length; // Prebacite na sljedeći slajd
+  slides[currentSlide].style.display = "block"; // Prikaz nove slike
+  slides[currentSlide].style.opacity = 1; // Postavite novu sliku na vidljivu
 }
 
-setInterval(showNextSlide, 3000); // Promjena svakih 3 sekunde
+setInterval(showNextSlide, 4000); // Promjena svakih 4 sekunde
 
 window.onload = function() {
   const userAgent = navigator.userAgent.toLowerCase();
